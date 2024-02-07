@@ -11,9 +11,12 @@ Identify the location of the calculator code in the repository. Replace the exis
 Check if there are any dependencies mentioned in the repository, and make sure to install them. Use a virtual environment to manage dependencies. You can create a virtual environment using the following commands:
 
 `python -m venv venv` # Create a virtual environment
+
 `source venv/bin/activate`  # Activate the virtual environment (for Linux/Mac)
+
 or
 `venv\Scripts\activate`  # Activate the virtual environment (for Windows)
+
 
 5. Then, install the dependencies using:
 
