@@ -34,8 +34,11 @@ Execute the pytest command to run the tests. Use the following command: `pytest`
 Once you have successfully replaced the calculator code, modified the pytest files, and verified that the tests pass, commit your changes using Git:
 
 `git add .`
+
 `git commit -m "Replace calculator code with Discord message sending code"`
+
 `git push origin master  # Assuming you are on the master branch`
+
 
 # Changes to be made to get the authorization code from a .env file
 
