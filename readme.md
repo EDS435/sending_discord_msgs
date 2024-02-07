@@ -12,7 +12,7 @@ Check if there are any dependencies mentioned in the repository, and make sure t
 
 `python -m venv venv` # Create a virtual environment
 `source venv/bin/activate`  # Activate the virtual environment (for Linux/Mac)
-# or
+or
 `venv\Scripts\activate`  # Activate the virtual environment (for Windows)
 
 5. Then, install the dependencies using:
@@ -55,13 +55,13 @@ Update your Python script to use the python-dotenv library to load the environme
 `from dotenv import load_dotenv`
 `import requests`
 
-# Load environment variables from .env
+Load environment variables from .env
 `load_dotenv()`
 
-# Get Discord token from environment variable
+Get Discord token from environment variable
 `discord_token = os.getenv("DISCORD_TOKEN")`
 
-# Check if the token is available
+Check if the token is available
 `if discord_token is None:`
     `raise ValueError("Discord token not found in the .env file")`
 
