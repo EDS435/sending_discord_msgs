@@ -48,26 +48,34 @@ By using a .env file and python-dotenv, you can keep sensitive information, such
 Install the python-dotenv library using the following command:
 
 `pip install python-dotenv`
+
 2.  Create a .env File
 Create a file named .env in the same directory as your Python script. Add the following line to the .env file:
 
 `DISCORD_TOKEN=insert token here`
+
 Replace the token value with your actual Discord authorization token.
 
 3. Modify Your Python Script
 Update your Python script to use the python-dotenv library to load the environment variables from the .env file. You can do that by adding the following code to your python script. 
 
 `import os`
+
 `from dotenv import load_dotenv`
+
 `import requests`
+
 
 Load environment variables from .env
 `load_dotenv()`
 
+
 Get Discord token from environment variable
 `discord_token = os.getenv("DISCORD_TOKEN")`
 
+
 Check if the token is available
+
 `if discord_token is None:`
     `raise ValueError("Discord token not found in the .env file")`
 
