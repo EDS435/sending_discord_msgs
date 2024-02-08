@@ -11,9 +11,12 @@ Identify the location of the calculator code in the repository. Replace the exis
 Check if there are any dependencies mentioned in the repository, and make sure to install them. Use a virtual environment to manage dependencies. You can create a virtual environment using the following commands:
 
 `python -m venv venv` # Create a virtual environment
+
 `source venv/bin/activate`  # Activate the virtual environment (for Linux/Mac)
-# or
+
+or
 `venv\Scripts\activate`  # Activate the virtual environment (for Windows)
+
 
 5. Then, install the dependencies using:
 
@@ -31,8 +34,11 @@ Execute the pytest command to run the tests. Use the following command: `pytest`
 Once you have successfully replaced the calculator code, modified the pytest files, and verified that the tests pass, commit your changes using Git:
 
 `git add .`
+
 `git commit -m "Replace calculator code with Discord message sending code"`
+
 `git push origin master  # Assuming you are on the master branch`
+
 
 # Changes to be made to get the authorization code from a .env file
 
@@ -42,26 +48,34 @@ By using a .env file and python-dotenv, you can keep sensitive information, such
 Install the python-dotenv library using the following command:
 
 `pip install python-dotenv`
+
 2.  Create a .env File
 Create a file named .env in the same directory as your Python script. Add the following line to the .env file:
 
 `DISCORD_TOKEN=insert token here`
+
 Replace the token value with your actual Discord authorization token.
 
 3. Modify Your Python Script
 Update your Python script to use the python-dotenv library to load the environment variables from the .env file. You can do that by adding the following code to your python script. 
 
 `import os`
+
 `from dotenv import load_dotenv`
+
 `import requests`
 
-# Load environment variables from .env
+
+Load environment variables from .env
 `load_dotenv()`
 
-# Get Discord token from environment variable
+
+Get Discord token from environment variable
 `discord_token = os.getenv("DISCORD_TOKEN")`
 
-# Check if the token is available
+
+Check if the token is available
+
 `if discord_token is None:`
     `raise ValueError("Discord token not found in the .env file")`
 
