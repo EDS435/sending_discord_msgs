@@ -8,6 +8,7 @@ VALID_TOKEN = os.getenv("DISCORD_TOKEN")
 VALID_CHANNEL_ID = "1201390755604877362"
 Content = {"content": "test"}
 
+
 @pytest.fixture
 def valid_headers():
     return {"Authorization": VALID_TOKEN}
