@@ -1,21 +1,16 @@
 import os
 from dotenv import load_dotenv
 import requests
-
 load_dotenv()
 discord_token = os.getenv("DISCORD_TOKEN")
-
 if discord_token is None:
     raise ValueError("Discord token not found in the .env file")
-
-url = "https://discord.com/api/v9/channels/1201390755604877362/messages"
-
+url = "http://127.0.0.1:5000/api/v1/messages"
 payload = {
     "content" : "test"
 }
-
 headers = {
     "Authorization" : discord_token
 }
+res = requests.post(url, json=payload, headers=headers)
 
-res = requests.post(url, payload, headers=headers)
