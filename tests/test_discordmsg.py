@@ -26,3 +26,14 @@ def test_send_discord_message_valid(valid_headers, num_records):
         res = requests.post(url, json=payload, headers=valid_headers)
 
         assert res.status_code == 200
+
+'''
+def test_send_discord_message_variable(valid_headers, request):
+    num_records = request.config.getoption("--num_records")
+    url = f"https://discord.com/api/v9/channels/{VALID_CHANNEL_ID}/messages"
+    for _ in range(num_records):
+        payload = {"content": fake.word()}
+        res = requests.post(url, json=payload, headers=valid_headers)
+
+        assert res.status_code == 200
+'''
