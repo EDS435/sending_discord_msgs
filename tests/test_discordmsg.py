@@ -1,10 +1,12 @@
 import os
 from dotenv import load_dotenv
 import requests
+from faker import Faker
 import pytest
 load_dotenv()
+fake = Faker()
 VALID_TOKEN = os.getenv("DISCORD_TOKEN")
-Content = {"content": "tests"}
+Content = {"content": fake.word()}
 @pytest.fixture
 def valid_headers():
     return {"Authorization": VALID_TOKEN}
